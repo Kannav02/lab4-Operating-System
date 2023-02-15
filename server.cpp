@@ -34,7 +34,7 @@ int main()
 
 
 	//bind()
-	if((bind(serverFD,(struct sockaddr*)&addr,sizeof(addr)==-1)))
+	if((bind(serverFD,(struct sockaddr*)&addr,sizeof(addr))==-1))
 	{
 		cout<<"BindingError:"<<strerror(errno)<<endl;
 		exit(-1);
@@ -62,6 +62,7 @@ int main()
 		exit(-1);
 
 	}
+	cout<<"Client Connected to the server"<<endl;
 
 
 
